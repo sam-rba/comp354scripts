@@ -22,7 +22,7 @@ new: new.o
 old: old.o
 	g++ -o $@ ${LDFLAGS} $^
 
-%.o: %.cpp
+%.o: %.cpp header.hpp
 	g++ -c ${CFLAGS} $<
 
 clean:

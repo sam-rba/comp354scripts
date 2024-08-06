@@ -1,27 +1,25 @@
 #include <iostream>
 #include <ql/experimental/math/generalizedhyperbolicdistribution.hpp>
 
+#include "header.hpp"
+
 using namespace QuantLib;
 using namespace std;
 
 int
 main() {
-	Real lambda = -0.5;
-	Real alpha  =  1;
-	Real beta   =  0.5;
-	Real delta  =  0.5;
-	Real mu     =  0;
-
-	const int start = -200;
-	const int stop = 200;
-	const int step = 1;
-	const int scale = 100;
-	int i;
-	double x;
+	Real lambda = LAMBDA;
+	Real alpha = ALPHA;
+	Real beta = BETA;
+	Real delta = DELTA;
+	Real mu = MU;
 
 	GeneralizedHyperbolicDistribution pdf(lambda, alpha, beta, delta, mu);
-	for (i = start; i < stop; i += step) {
-		x = (double) i / (double) scale;
+
+	int i;
+	double x;
+	for (i = START; i < STOP; i += STEP) {
+		x = (double) i / SCALE;
 		cout << x << ' ' << pdf(x) << '\n';
 	}
 }

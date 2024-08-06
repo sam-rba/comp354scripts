@@ -1,0 +1,6 @@
+*.o
+*.png
+new
+old
+*.data
+*.csv
