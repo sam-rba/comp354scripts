@@ -1,0 +1,10 @@
+prefix=/home/sam/school/c354/project/maintenance/quantlibinst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: QuantLib
+Description: The free/open-source library for quantitative finance.
+Version: 1.36.0-dev
+Cflags: -I${prefix}/include    
+Libs: -L${exec_prefix}/lib -lQuantLib  
